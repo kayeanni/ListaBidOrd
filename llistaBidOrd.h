@@ -16,7 +16,7 @@ typedef struct {
 	Nodo * pdi;
 } ListaBid;
 
-ListaBid LISTABID_CREA();
+ListaBid LISTABID_crea();
 void LISTABID_inserirDelante (ListaBid * l, int e);
 void LISTABID_inserirDetras (ListaBid * l, int e);
 //int LISTABID_elimina (ListaBid * l);
