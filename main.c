@@ -25,7 +25,7 @@ void main () {
 			}
 			LISTABID_inserirDetras (&l, valor);
 		}
-
+	}
 	LISTABID_vesInicio(&l);
 	while (!LISTABID_final(l)) {
 		e = LISTABID_consulta(l);
