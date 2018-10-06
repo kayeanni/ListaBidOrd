@@ -13,17 +13,20 @@ void main () {
 
 	for (i=0; i < num; i++) {
 		printf("Introduce numero %d: ", i +1);
-		scanf ("%d", &num);
+		scanf ("%d", &valor);
 
 		LISTABID_vesInicio (&l);
 		if (LISTABID_estaVacia(l)) {
 			LISTABID_inserirDelante (&l, valor);
 		}
 		else {
-			while (!LISTABID_final(l)) {
+			while (!LISTABID_final(l) && LISTABID_consulta(l) < valor) {
 				LISTABID_avanza(&l);
 			}
-			LISTABID_inserirDetras (&l, valor);
+			LISTABID_inserirDelante (&l, valor);
+			if (LISTABID_consulta(l) < valor) {
+				LISTABID_inserirDetras(&l, valor);
+			}
 		}
 	}
 	LISTABID_vesInicio(&l);
