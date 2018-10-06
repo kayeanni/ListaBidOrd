@@ -48,10 +48,10 @@ void LISTABID_inserirDetras (ListaBid * l, int e) {
 		aux = (Nodo*)malloc(sizeof(Nodo));
 		if (aux != NULL) {
 			aux->e = e;
-			aux->sig = l->pdi;
-			aux->ant = l->pdi->ant;
-			l->pdi->ant->sig = aux;
-			l->pdi->ant = aux;
+			aux->sig = l->pdi->sig;
+			aux->ant = l->pdi;
+			l->pdi->sig->ant = aux;
+			l->pdi->sig = aux;
 		}
 	}
 }
