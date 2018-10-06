@@ -19,6 +19,7 @@ typedef struct {
 ListaBid LISTABID_crea();
 void LISTABID_inserirDelante (ListaBid * l, int e);
 void LISTABID_inserirDetras (ListaBid * l, int e);
+int LISTABID_consulta(ListaBid l);
 //int LISTABID_elimina (ListaBid * l);
 void LISTABID_avanza (ListaBid * l);
 void LISTABID_retrocede (ListaBid * l);
